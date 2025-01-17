@@ -9,7 +9,7 @@ Esempio di pulsante:
 ```
 function MyButton()
 {
-    return <button>Esempio</button>;
+    return (<button>Esempio</button>);
 }
 ```
 
@@ -20,7 +20,7 @@ I props permettono di cambiare le informazioni visualizzate:
 ```
 function MyButton(props)
 {
-    return <button>Esempio per {props.username}</button>;
+    return (<button>Esempio per {props.username}</button>);
 }
 
 // in un altro file
@@ -39,7 +39,7 @@ la classe, nella sintassi JSX viene chiamata className:
 ```
 function MyButton()
 {
-    return <button className="pulsante">Esempio</button>;
+    return (<button className="pulsante">Esempio</button>);
 }
 ```
 
@@ -59,6 +59,20 @@ name: "marco"
 
 function MyButton(props)
 {
-    return <button>Esempio per props.user.name</button>;
+    return (<button>Esempio per props.user.name</button>);
+}
+```
+
+- si possono usare le espressioni ternarie.
+
+```
+const user = {
+    eta:18,
+    nome: "marino"
+}
+
+function MyButton(props)
+{
+    return (<button>eta>=18 ? maggiorenne : minorenne</button>)
 }
 ```
